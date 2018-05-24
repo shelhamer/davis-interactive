@@ -1,0 +1,880 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
+    
+    
+      
+        <title>session - DAVIS Interactive Evaluation Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="DAVIS Interactive Evaluation Framework" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">laptop</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                DAVIS Interactive Evaluation Framework
+              </span>
+              <span class="md-header-nav__topic">
+                session
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/albertomontesg/davis-interactive" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      albertomontesg/davis-interactive
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon">laptop</i>
+      
+    </span>
+    DAVIS Interactive Evaluation Framework
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/albertomontesg/davis-interactive" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      albertomontesg/davis-interactive
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../challenge/" title="Challenge" class="md-nav__link">
+      Challenge
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      User Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        User Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user_guide/installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user_guide/usage/" title="Usage" class="md-nav__link">
+      Usage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user_guide/scribbles/" title="Scribbles Format" class="md-nav__link">
+      Scribbles Format
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Interactive Session
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        Interactive Session
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+    <a href="./" title="session" class="md-nav__link md-nav__link--active">
+      session
+    </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Dataset
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        Dataset
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dataset.davis/" title="dataset.davis" class="md-nav__link">
+      dataset.davis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Evaluation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        Evaluation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../evaluation.service/" title="evaluation.service" class="md-nav__link">
+      evaluation.service
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Robot
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        Robot
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../robot/" title="robot.interactive_robot" class="md-nav__link">
+      robot.interactive_robot
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
+    
+    <label class="md-nav__link" for="nav-4-5">
+      Metrics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
+        Metrics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../metrics.jaccard/" title="metrics.jaccard" class="md-nav__link">
+      metrics.jaccard
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6">
+    
+    <label class="md-nav__link" for="nav-4-6">
+      Utils
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-6">
+        Utils
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../utils.operations/" title="utils.operations" class="md-nav__link">
+      utils.operations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../utils.scribbles/" title="utils.scribbles" class="md-nav__link">
+      utils.scribbles
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../utils.mask/" title="utils.mask" class="md-nav__link">
+      utils.mask
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../utils.visualization/" title="utils.visualization" class="md-nav__link">
+      utils.visualization
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-7" type="checkbox" id="nav-4-7">
+    
+    <label class="md-nav__link" for="nav-4-7">
+      Third Party
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-7">
+        Third Party
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../third_party/mask_api/" title="third_party.mask_api" class="md-nav__link">
+      third_party.mask_api
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/albertomontesg/davis-interactive#/docs/session.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="davisinteractive.session">davisinteractive.session</h1>
+
+<h1 id="davisinteractive.session.DavisInteractiveSession">DavisInteractiveSession</h1>
+
+<p><div class="codehilite"><pre><span></span><span class="n">DavisInteractiveSession</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">user_key</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">davis_root</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">subset</span><span class="o">=</span><span class="s1">&#39;val&#39;</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">max_time</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">max_nb_interactions</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">report_save_dir</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+</pre></div>
+Class which allows to interface with the evaluation.</p>
+<p><strong>Arguments</strong></p>
+<ul>
+<li><strong>host</strong>: String. Host of the evuation server. Only <code>localhost</code>
+        available for now.</li>
+<li><strong>user_key</strong>: String. User identifier (e.g. email). If the session is being
+        run in <code>localhost</code>, <code>user_key</code> does not need to be specified
+        (username will be used).</li>
+<li><strong>davis_root</strong>: String. Path to the Davis dataset root path. Necessary
+        for evaluation when <code>host='localhost'</code>.</li>
+<li><strong>subset</strong>: String. Subset to evaluate. If <code>host='localhost'</code> subset
+        can only be <code>train</code> or <code>val</code> subsets. If the evaluation is
+        performed against a remote server, this parameter is ignored
+        and the evaulated subset will be given by the remote server.</li>
+<li><strong>shuffle</strong>: Boolean. Shuffle the samples when evaluating.</li>
+<li><strong>max_time</strong>: Integer. Number of seconds maximum to evaluate a single
+        sample.</li>
+<li><strong>max_nb_interactins</strong>: Integer. Maximum number of interactions to
+        evaluate per sample.</li>
+<li><strong>report_save_dir</strong>: String. Path to the directory where the report will
+        be stored during the evaluation. By default is the current working
+        directory. A temporal file will be storing snapshots of the results
+        on this same directory with a suffix <code>.tmp</code>.</li>
+</ul>
+<h2 id="davisinteractive.session.DavisInteractiveSession.next">next</h2>
+
+<p><div class="codehilite"><pre><span></span><span class="n">DavisInteractiveSession</span><span class="o">.</span><span class="n">next</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</pre></div>
+Iterate to the next iteration/sample of the evaluation process.</p>
+<p>This function moves the iteration to the next iteration or to the next
+sample in case the maximum number of iterations or maximum time have
+been hit.
+This function can be used as control flow on user's code to know until
+which iteration the evuation is being performed.</p>
+<p><strong>Returns</strong></p>
+<p><code>bool</code>: Indicates whether the evaluation is still taking place.</p>
+<h2 id="davisinteractive.session.DavisInteractiveSession.get_scribbles">get_scribbles</h2>
+
+<p><div class="codehilite"><pre><span></span><span class="n">DavisInteractiveSession</span><span class="o">.</span><span class="n">get_scribbles</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">only_last</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre></div>
+Ask for the next scribble</p>
+<p>There is the possibility to ask for only the last scribble. By default,
+all scribbles obtained for the current sample are returned.</p>
+<p>This method returns information about the sequence of the sample being
+evaluated, the scribbles and whether it is a new sample. This
+information might be useful for the user to perform any operation like
+loading a model for a new sequence.</p>
+<p><strong>Arguments</strong></p>
+<ul>
+<li><strong>only_last</strong>: Boolean.</li>
+</ul>
+<p><strong>Returns</strong></p>
+<p><code>(string, dict, bool)</code>: Returns the name of the sequence of the
+        current sample, the scribbles of the current sample and a
+        boolean indicating whether it is the first iteration of the
+        given sample, respectively.</p>
+<h2 id="davisinteractive.session.DavisInteractiveSession.scribbles_iterator">scribbles_iterator</h2>
+
+<p><div class="codehilite"><pre><span></span><span class="n">DavisInteractiveSession</span><span class="o">.</span><span class="n">scribbles_iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+Iterate over all the samples and iterations to evaluate.</p>
+<p>Instead of running a while loop with
+<code>DavisInteractiveSession.next</code> and then call to
+<code>DavisInteractiveSession.get_scribbles</code>, you can iterate with this
+generator:</p>
+<p><strong>Example</strong></p>
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="n">sequence</span><span class="p">,</span> <span class="n">scribble</span><span class="p">,</span> <span class="n">new_sequence</span> <span class="ow">in</span> <span class="n">sess</span><span class="o">.</span><span class="n">scribbles_iterator</span><span class="p">():</span>
+    <span class="c1"># Predict with model</span>
+</pre></div>
+
+<p><strong>Arguments</strong></p>
+<ul>
+<li><strong>*args, **kwargs</strong>: This arguments will be passed internally to
+        <code>DavisInteractiveSession.get_scribbles</code> method.</li>
+</ul>
+<p><strong>Yields</strong></p>
+<p><code>(string, dict, bool)</code>: Yields the name of the sequence of the
+        current sample, the scribbles of the current sample and a
+        boolean indicating if it is the first iteration of the given
+        sample, respectively.</p>
+<h2 id="davisinteractive.session.DavisInteractiveSession.submit_masks">submit_masks</h2>
+
+<p><div class="codehilite"><pre><span></span><span class="n">DavisInteractiveSession</span><span class="o">.</span><span class="n">submit_masks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pred_masks</span><span class="p">)</span>
+</pre></div>
+Submit the predicted masks.</p>
+<p><strong>Arguments</strong></p>
+<ul>
+<li><strong>pred_masks</strong>: Numpy array with the predicted mask for
+        the current sample. The array must be of <code>dtype=np.int</code> and
+        of size equal to the 480p resolution of the DAVIS
+        dataset.</li>
+</ul>
+<h2 id="davisinteractive.session.DavisInteractiveSession.get_report">get_report</h2>
+
+<p><div class="codehilite"><pre><span></span><span class="n">DavisInteractiveSession</span><span class="o">.</span><span class="n">get_report</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</pre></div>
+Gives the current report of the evaluation</p>
+<p><strong>Returns</strong></p>
+<p><code>pd.DataFrame</code>: Dataframe with the current evaluation results. This
+        DataFrame contains the same table as the store on
+        <code>report_save_dir</code>.</p>
+<h2 id="davisinteractive.session.DavisInteractiveSession.get_global_summary">get_global_summary</h2>
+
+<p><div class="codehilite"><pre><span></span><span class="n">DavisInteractiveSession</span><span class="o">.</span><span class="n">get_global_summary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">save_file</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+</pre></div>
+Gives a summary from the current session.</p>
+<p>In the case the session is running against the remote server, when
+calling this function, the current session will be marked as completed.</p>
+<p><strong>Arguments</strong></p>
+<ul>
+<li><strong>save_file</strong>: String or Path. Path to store the global summary of the
+        session. By default does not save it.</li>
+</ul>
+<p><strong>Returns</strong></p>
+<p><code>Dictionary</code>: Dictionary of parameters that summarize all the session.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../user_guide/scribbles/" title="Scribbles Format" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Scribbles Format
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../dataset.davis/" title="dataset.davis" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                dataset.davis
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 Alberto Montes
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/albertomontesg/davis-interactive" class="md-footer-social__link fa fa-github-alt"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.b438e6c5.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-119121429-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>
