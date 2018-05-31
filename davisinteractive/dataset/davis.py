@@ -26,6 +26,7 @@ _SETS = {s: [] for s in _DATASET['sets']}
 for s in _DATASET['sequences'].values():
     _SETS[s['set']].append(s['name'])
 _SETS['trainval'] = _SETS['train'] + _SETS['val']
+_SETS['debug'] = ['camel', 'parkour']
 
 
 class Davis:
